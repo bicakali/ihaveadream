@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ihaveadream/screens/forgot_password.dart';
+import 'package:ihaveadream/screens/log_in.dart';
+import 'package:ihaveadream/screens/register.dart';
 import 'package:ihaveadream/screens/splash.dart';
 import 'package:ihaveadream/screens/welcome.dart';
 
@@ -18,7 +21,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         '/splash': (context) => const Splash(),
-        '/intro': (context) => WelcomeScreen(),
+        '/intro': (context) => const WelcomeScreen(),
+        '/logIn': (context) => LogInScreen(),
+        '/register': (context) => const RegisterScreen(),
+        '/forgotPassword': (context) => ForgotPassword(),
       },
     );
   }
