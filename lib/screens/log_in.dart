@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ihaveadream/variables.dart';
-
+import 'package:sizer/sizer.dart';
 
 // ignore: must_be_immutable
 class LogInScreen extends StatelessWidget {
@@ -11,7 +11,6 @@ class LogInScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: screenBgColor,
       body: SafeArea(
@@ -22,7 +21,7 @@ class LogInScreen extends StatelessWidget {
             title('Giriş Yap'),
 
             SizedBox(
-              height: size.height / 15,
+              height: 10.h,
             ),
 
             //   Log in Form
@@ -84,14 +83,14 @@ class LogInScreen extends StatelessWidget {
 
             // Login Button
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 40),
               child: ElevatedButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.grey[800]),
                   fixedSize:
-                      MaterialStateProperty.all(Size.fromWidth(size.width)),
+                      MaterialStateProperty.all(Size.fromWidth(100.h)),
                 ),
-                onPressed: () {},
+                onPressed: () {Navigator.pushNamed(context, '/home');},
                 child: const Text('Giriş Yap',
                     style: TextStyle(fontSize: 20, color: Colors.white)),
               ),
@@ -125,7 +124,7 @@ class LogInScreen extends StatelessWidget {
             ),
 
             SizedBox(
-              height: size.height / 20,
+              height: 10.h,
             ),
 
             // Sign in with Google
@@ -136,7 +135,7 @@ class LogInScreen extends StatelessWidget {
                   backgroundColor:
                       MaterialStateProperty.all(Colors.grey[700]),
                   fixedSize:
-                      MaterialStateProperty.all(Size.fromWidth(size.width)),
+                      MaterialStateProperty.all(Size.fromWidth(100.w)),
                 ),
                 onPressed: () {},
                 child: const Text('Google ile giriş yap',

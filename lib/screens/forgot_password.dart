@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ihaveadream/variables.dart';
+import 'package:sizer/sizer.dart';
 
 // ignore: must_be_immutable
 class ForgotPassword extends StatelessWidget {
@@ -9,7 +10,6 @@ class ForgotPassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: screenBgColor,
       body: Column(
@@ -42,7 +42,7 @@ class ForgotPassword extends StatelessWidget {
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.grey[800]),
                   fixedSize:
-                      MaterialStateProperty.all(Size.fromWidth(size.width)),
+                      MaterialStateProperty.all(Size.fromWidth(100.w)),
                 ),
                 onPressed: () {},
                 child: const Text('Gönder',

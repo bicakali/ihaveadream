@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../variables.dart';
+import 'package:sizer/sizer.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);
@@ -17,7 +18,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: screenBgColor,
       body: SafeArea(
@@ -28,7 +28,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             title('Kayıt Ol'),
 
             SizedBox(
-              height: size.height / 15,
+              height: 15.h,
             ),
 
             //   Log in Form
@@ -74,7 +74,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.grey[800]),
                   fixedSize:
-                      MaterialStateProperty.all(Size.fromWidth(size.width)),
+                      MaterialStateProperty.all(Size.fromWidth(100.w)),
                 ),
                 onPressed: () {},
                 child: const Text('Kayıt Ol',
@@ -107,7 +107,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             ),
 
             SizedBox(
-              height: size.height / 20,
+              height: 7.h,
             ),
 
             // Sign in with Google
@@ -117,7 +117,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.grey[700]),
                   fixedSize:
-                      MaterialStateProperty.all(Size.fromWidth(size.width)),
+                      MaterialStateProperty.all(Size.fromWidth(100.w)),
                 ),
                 onPressed: () {},
                 child: const Text('Google ile kayıt ol',

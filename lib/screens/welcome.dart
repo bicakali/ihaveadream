@@ -5,6 +5,7 @@ import 'package:intro_slider/dot_animation_enum.dart';
 
 import 'package:intro_slider/intro_slider.dart';
 import 'package:intro_slider/slide_object.dart';
+import 'package:sizer/sizer.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -16,7 +17,6 @@ class WelcomeScreen extends StatefulWidget {
 class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
 
     // Sliders
     List<Slide> slides = [
@@ -49,7 +49,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         backgroundColor: Colors.black45,
         centerWidget: Image.asset(
           './assets/share.png',
-          width: size.width / 2,
+          width: 50.w,
         ),
         title: 'Paylaşımlar',
         description: 'Sevdiğin resimleri, anları paylaşabilirsin',
